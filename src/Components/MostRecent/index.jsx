@@ -4,8 +4,15 @@ import coverIcon from "../../Assets/book_cover_placeholder.png"
 
 
 
-
 function MostRecent(props) {
+
+    // const details = props.stateToProps
+    // console.log(details)
+
+
+
+
+
     return (
         <>
             <CardContainer>
@@ -17,9 +24,9 @@ function MostRecent(props) {
                     </div>
                     <div className="right">
                         <p>Titel:<br/></p>
-                        <p>to be fetched</p>
+                        {/*<p className="text">{details.title}</p>*/}
                         <p>Author:<br/></p>
-                        <p>to be fetched</p>
+                        {/*<p className="text">{details.author}</p>*/}
                     </div>
                     </section>
                 </Card>

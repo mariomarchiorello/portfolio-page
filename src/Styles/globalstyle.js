@@ -6,6 +6,7 @@ export const GlobalStyle = createGlobalStyle`
       margin: 0;
       padding: 0;
       font-family: "roboto",sans-serif;
+      cursor: pointer;
     }
 `
 export const Background = styled.body`
@@ -31,6 +32,7 @@ export const CardContainer = styled.div`
       width: 65vw;
     }
   
+  
 
 `;
 export const Card = styled.div`
@@ -39,40 +41,62 @@ export const Card = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  .titel{
+
+  .titel {
     text-align: center;
-    color:#004FA0 ;
+    color: #004FA0;
     font-size: large;
     margin-bottom: 0.5rem;
   }
 
-  .content{
-  margin-top:10% ;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-      @media(min-width: 480px){
-       width:80%;
-       height: 80%; 
-       margin-top: -1%;
-          justify-content: space-around;
-      }
-  
-  
-  .left{
-    height:100% ;
-    width: 30%;    
-    img{
-      @media(min-width: 480px){
-        height: 7rem;
-        width: 7rem;
+  .content {
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    @media (min-width: 480px) {
+      width: 80%;
+      height: 80%;
+      margin-top: -1%;
+      justify-content: space-evenly;
+    }
+
+    .text {
+      text-transform: capitalize;
+      text-decoration: underline;
+      font-size: large;
+      line-height: 1.5;
+    }
+
+
+    .left {
+      height: 100%;
+      width: 30%;
+      @media (min-width: 480px) {
+        img {
+          height: 7rem;
+          width: 7rem;
+        }
       }
     }
+
+    .right {
+      height: 100%;
+      width: 65%;
+      @media (min-width: 480px) {
+        text-align: center;
+        line-height: 1.5;
+      }
+
+    }
   }
-  .right{
-    height: 80%;
-    width: 60%;
-  }}
+
+  transition: background-color 1s, opacity 1s;
+
+  :hover {
+
+    background-color: rgba(9, 111, 213, 0.44);
+  }
 
 `;
 

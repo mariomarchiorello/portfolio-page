@@ -10,13 +10,14 @@ const initialState = {
     editBook : {},
 }
 
-const reducer = (state= initialState,action) => {
+const Reducer = (state= initialState,action) => {
     switch (action.type){
-        case "GET_MOST_RECENT_BOOK":
-            return{ ...state, mostRecentBook: action.payload}
+        case "GET_All_BOOKS":
+            return{ ...state, allBooks: action.payload}
+        default:
+            return state;
     }
 
+};
 
-}
-
-export const RootReducer = combineReducers(reducer)
+export const RootReducer = combineReducers(Reducer)
