@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const Container= styled.div`
+  position: sticky;
+  top: 0;
   height: 10vh;
   width: 100vw;
   background-color:#004FA0;

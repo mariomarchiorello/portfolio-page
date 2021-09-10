@@ -7,11 +7,10 @@ export const GlobalStyle = createGlobalStyle`
       padding: 0;
       font-family: "roboto",sans-serif;
       cursor: pointer;
-    }
-`
-export const Background = styled.body`
+    }`;
 
-      height: 100vh;
+export const Background = styled.body`
+      height: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -19,36 +18,50 @@ export const Background = styled.body`
 `;
 
 export const CardContainer = styled.div`
-    height: 25vh;
-    width: 85vw;
-    margin-top:4%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffffff;
-    -webkit-box-shadow: 0px 10px 13px -7px #000000, 0px 12px 23px -21px #000000; 
-    box-shadow: 0px 10px 13px -7px #000000, 0px 12px 23px -21px #000000;
-    @media(min-width: 480px){
-      width: 65vw;
-    }
-  
-  
-
-`;
-export const Card = styled.div`
-  height: 90%;
-  width: 90%;
+  min-height: 40vh;
+  width: 85vw;
+  margin-top: 4%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  box-shadow: 1px 10px 11px 3px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 1px 10px 11px 3px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 1px 10px 11px 3px rgba(0, 0, 0, 0.6);
 
-  .titel {
-    text-align: center;
-    color: #004FA0;
-    font-size: large;
-    margin-bottom: 0.5rem;
+  .buttonCard {
+    text-decoration: none;
+    text-underline: none;
+    outline: transparent;
+    transition: background-color 0.6s;
+    text-align:center;
+    font-size:25px;
+    color: black;
+    :hover {
+      background-color: rgba(0, 79, 160, 0.62);
+    }
   }
+  @media (min-width: 480px) {
+    width: 65vw;
+  }`;
 
+export const Card = styled.div`
+  height: 40vh;
+  width: 90%;
+  border: none;
+  outline: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 1px 10px 11px 3px rgba(0,0,0,0.6);
+  -webkit-box-shadow: 1px 10px 11px 3px rgba(0,0,0,0.6);
+  -moz-box-shadow: 1px 10px 11px 3px rgba(0,0,0,0.6);
+  .card{
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  }
   .content {
     margin-top: 10%;
     display: flex;
@@ -60,15 +73,12 @@ export const Card = styled.div`
       margin-top: -1%;
       justify-content: space-evenly;
     }
-
     .text {
       text-transform: capitalize;
       text-decoration: underline;
       font-size: large;
       line-height: 1.5;
     }
-
-
     .left {
       height: 100%;
       width: 30%;
@@ -79,7 +89,6 @@ export const Card = styled.div`
         }
       }
     }
-
     .right {
       height: 100%;
       width: 65%;
@@ -87,18 +96,27 @@ export const Card = styled.div`
         text-align: center;
         line-height: 1.5;
       }
-
     }
   }
-
-  transition: background-color 1s, opacity 1s;
-
-  :hover {
-
-    background-color: rgba(9, 111, 213, 0.44);
-  }
-
 `;
 
 
+
+
+export const Label = styled.label`
+  margin:1% 0 0 2% ;
+
+`;
+
+export const Input = styled.input`
+  height: 35px;
+  width: 85%;
+  border:none;
+  border-bottom: solid 3px gray;
+  margin:1% 0 0 2% ;
+  border-radius: 5px;
+  font-size: large;
+  
+
+`;
 
