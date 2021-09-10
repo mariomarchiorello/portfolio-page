@@ -3,13 +3,14 @@ import {Background, CardContainer} from "../../Styles/globalstyle";
 import Header from "../Header";
 import {CardAll} from "./style";
 import icon from "../../Assets/book_cover_placeholder.png"
+import {Link} from "react-router-dom";
+import BackButton from "../BackButton";
 
 
 function ShowAll(props) {
-
     /*loop over array of all books and return a card for each element*/
         const [allBooks, setAllBooks] = useState([])
-
+/*------------------ get all books------------------------------------------------*/
         useEffect(()=> {
         const config = {
             method:"GET",
@@ -26,6 +27,27 @@ function ShowAll(props) {
                 console.error(err)
             })
           },[])
+
+    /*-----------------book delete by id  function--------------------------------------*/
+    const bookDeleter= (id)=>{
+        // e.preventDefault()
+    const config = {
+            method: "DELETE",
+            headers: new Headers({
+                "content-Type": "application/json"
+            })
+        }
+        const url = `https://5c6eb0534fa1c9001424240b.mockapi.io/api/v1/books/${id}`
+        fetch(url, config)
+            .then(res => {
+                console.log(res)
+                res.json()})
+
+            .catch(err => {
+                console.error(err)
+            })}
+
+
 
     return (
         <>
@@ -49,6 +71,8 @@ function ShowAll(props) {
                                         <p className="text">Isbn: {element? element.isbn:""}</p>
                                     </section>
                                     <section className="buttons">
+                                        {element ? <Link to="/change" className= "action" onClick= {()=>sessionStorage.setItem("currentId",element.id)}>Edit</Link>:null}
+                                        {element ? <Link to="/" className="action" onClick={()=>bookDeleter(element.id)}>Delete</Link>:null}
 
                                     </section>
                                 </CardAll>
@@ -57,6 +81,7 @@ function ShowAll(props) {
                     }
 
                 </CardContainer>
+            <BackButton/>
             </Background>
 
         </>

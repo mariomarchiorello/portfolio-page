@@ -15,6 +15,7 @@ export const Background = styled.body`
       flex-direction: column;
       align-items: center;
       background-color: #eef3f5;
+  overflow-x: hidden;
 `;
 
 export const CardContainer = styled.div`
@@ -41,6 +42,7 @@ export const CardContainer = styled.div`
     :hover {
       background-color: rgba(0, 79, 160, 0.62);
     }
+    
   }
   @media (min-width: 480px) {
     width: 65vw;
@@ -57,6 +59,7 @@ export const Card = styled.div`
   box-shadow: 1px 10px 11px 3px rgba(0,0,0,0.6);
   -webkit-box-shadow: 1px 10px 11px 3px rgba(0,0,0,0.6);
   -moz-box-shadow: 1px 10px 11px 3px rgba(0,0,0,0.6);
+  
   .card{
   position: relative;
   transition: transform 1s;
@@ -100,11 +103,25 @@ export const Card = styled.div`
   }
 `;
 
+export const GoHome = styled.div`
+    height: 25px;
+  width: 65px;
+  border: 1px solid black;
+  border-radius: 5px;
+background-color: greenyellow;
+  position: fixed;
+  bottom:25px;
+  right: 25px;
+  text-align: center;
+  
+
+`;
 
 
 
 export const Label = styled.label`
   margin:1% 0 0 2% ;
+  text-transform: capitalize;
 
 `;
 

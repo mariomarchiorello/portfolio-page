@@ -8,7 +8,7 @@ export const PostFormContainer = styled.form`
   width: 85vw;  
   display: flex;
   flex-direction: column;
-  background: linear-gradient(120deg, #004D9F 0%, #0EC8C8 90%);
+  background: linear-gradient(100deg, #004D9F 0%, #0EC8C8 90%);
   box-shadow: 1px 10px 11px 3px rgba(0, 0, 0, 0.6);
   -webkit-box-shadow: 1px 10px 11px 3px rgba(0, 0, 0, 0.6);
   -moz-box-shadow: 1px 10px 11px 3px rgba(0, 0, 0, 0.6);
