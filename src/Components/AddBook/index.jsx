@@ -3,6 +3,7 @@ import {Background,  Input, Label} from "../../Styles/globalstyle";
 import Header from "../Header";
 import {PostFormContainer} from "./style";
 import { useHistory } from "react-router-dom";
+import BackButton from "../BackButton";
 
 
 function AddNewBook(props) {
@@ -95,6 +96,7 @@ function AddNewBook(props) {
                     </section>
                 </PostFormContainer>
 
+            <BackButton/>
             </Background>
 
         </>

@@ -28,30 +28,13 @@ export default function Home() {
     const latest = allBooks[allBooks.length-1]
     latest? sessionStorage.setItem("latestID", latest.id):sessionStorage.setItem("latestID", "")
 
-    console.log(allBooks)
         return (
             <>
                 <Background>
                     <Header/>
                         <CardContainer className="scene">
-                {/*            <Card className="card">
-                                <div className="card_face card_face--front">
-                                    <section className="titel">newest book in stock</section>
-                                    <section className="content">
-                                <div className="left">
-                                    <img src={coverIcon} alt={"book cover"}/>
-                                </div>
-                                <div className="right">
-                                    <p>Titel:<br/></p>
-                                    <p className="text">{latest? latest.title:""}</p>
-                                    <p>Author:<br/></p>
-                                    <p className="text">{latest?latest.author:""}</p>
-                                </div>
-                                </section>
-                                </div>
-                                <div className="card_face card_face--back">*/}
                                     <CardAll>
-                                    <section className="titel">newest book in stock</section>
+                                        <h2>newest book in stock</h2>
                                     <section className="cover">
                                         <img src={icon} alt="placeholder for bookcover"/>
                                     </section>
@@ -60,18 +43,12 @@ export default function Home() {
                                         <p className="text">Author: {latest? latest.author:""}</p>
                                         <p className="text">Amount in Stock: {latest? latest.total_amount:""}</p>
                                         <p className="text">Number of pages: {latest? latest.pages:""}</p>
-                                        <p className="text">Isbn: {latest? latest.isbn:""}</p>
                                     </section>
                                 </CardAll>
-                                {/*</div>*/}
-                            {/*</Card>*/}
                         </CardContainer>
 
-                    {allBooks?<Link to="/show-all" ><CardContainer  stateToProps={allBooks}><p className="buttonCard">
-                        Browse all books</p></CardContainer></Link>:null}
-                    <CardContainer>
-                        <Link to="/add-new"><p className="buttonCard">Add New Book</p></Link>
-                    </CardContainer>
+                    {allBooks?<CardContainer><Link to="/show-all" className="buttonCard" stateToProps={allBooks} >Browse all books</Link></CardContainer>:null}
+                    <CardContainer><Link to="/add-new" className="buttonCard">Add New Book</Link></CardContainer>
 
                 </Background>
 

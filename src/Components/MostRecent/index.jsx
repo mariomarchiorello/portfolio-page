@@ -17,7 +17,7 @@ function MostRecent(props) {
         <>
             <CardContainer>
                 <Card>
-                    <section className="titel">newest book in stock</section>
+                    <h1>newest book in stock</h1>
                     <section className="content">
                     <div className="left">
                         <img src={coverIcon} alt={"book cover"}/>
