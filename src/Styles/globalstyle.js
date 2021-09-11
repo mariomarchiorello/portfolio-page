@@ -11,11 +11,13 @@ export const GlobalStyle = createGlobalStyle`
 
 export const Background = styled.body`
       height: 100%;
+      max-width: 100vw;
       display: flex;
       flex-direction: column;
       align-items: center;
       background-color: #eef3f5;
-  overflow-x: hidden;
+      z-index: -1;
+  
 `;
 
 export const CardContainer = styled.div`
@@ -32,15 +34,19 @@ export const CardContainer = styled.div`
   -moz-box-shadow: 1px 10px 11px 3px rgba(0, 0, 0, 0.6);
 
   .buttonCard {
+    height: 35px;
+    padding: 10px;
+    border-radius: 15px;
     text-decoration: none;
     text-underline: none;
     outline: transparent;
-    transition: background-color 0.6s;
+    transition: background-color 0.5s ease-in-out, color 0.9s ease-in-out;
     text-align:center;
     font-size:25px;
     color: black;
     :hover {
-      background-color: rgba(0, 79, 160, 0.62);
+      background-color: rgba(28, 125, 226, 0.83);
+        color: white;
     }
     
   }
@@ -103,16 +109,22 @@ export const Card = styled.div`
   }
 `;
 
-export const GoHome = styled.div`
-    height: 25px;
-  width: 65px;
-  border: 1px solid black;
+export const GoHome = styled.button`
+    height: 45px;
+  width: 85px;
+  outline: transparent;
+  border:2px solid rgba(28, 125, 226, 0.83);
   border-radius: 5px;
-background-color: greenyellow;
   position: fixed;
-  bottom:25px;
+  bottom:45px;
   right: 25px;
   text-align: center;
+  background-color: white;
+  transition: background-color 0.6s ease-in-out , color 0.6s ease-in-out;
+  :hover{
+    background-color: rgba(28, 125, 226, 0.83);
+    color: white;
+  }
   
 
 `;

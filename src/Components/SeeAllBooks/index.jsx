@@ -70,9 +70,9 @@ function ShowAll(props) {
                                         <p className="text">Number of pages: {element? element.pages:""}</p>
                                         <p className="text">Isbn: {element? element.isbn:""}</p>
                                     </section>
-                                    <section className="buttons">
-                                        {element ? <Link to="/change" className= "action" onClick= {()=>sessionStorage.setItem("currentId",element.id)}>Edit</Link>:null}
-                                        {element ? <Link to="/" className="action" onClick={()=>bookDeleter(element.id)}>Delete</Link>:null}
+                                    <section className="actions">
+                                        {element ? <Link to="/change" onClick= {()=>sessionStorage.setItem("currentId",element.id)}><button>Edit</button></Link>:null}
+                                        {element ? <Link to="/" onClick={()=>bookDeleter(element.id)}><button>Delete</button></Link>:null}
 
                                     </section>
                                 </CardAll>
