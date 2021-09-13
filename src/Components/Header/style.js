@@ -3,8 +3,10 @@ import styled from "styled-components";
 export const Container= styled.div`
   position: sticky;
   top: 0;
+  z-index: 10;
+  overflow-x: hidden;
   height: 10vh;
-  width: 100vw;
+  width: 100%;
   background-color:#004FA0;
   color: #fff;
   display: flex;
