@@ -32,8 +32,8 @@ export default function Home() {
             <>
                 <Background>
                     <Header/>
-                        <CardContainer className="scene">
-                                    <CardAll>
+                        <CardContainer>
+                                    <CardAll className="onHomePage">
                                         <h2>newest book in stock</h2>
                                     <section className="cover">
                                         <img src={icon} alt="placeholder for bookcover"/>
@@ -43,6 +43,11 @@ export default function Home() {
                                         <p className="text">Author: {latest? latest.author:""}</p>
                                         <p className="text">Amount in Stock: {latest? latest.total_amount:""}</p>
                                         <p className="text">Number of pages: {latest? latest.pages:""}</p>
+                                    </section>
+                                        <section className="actions">
+                                        {latest ? <Link to="/change" onClick= {()=>sessionStorage.setItem("currentId",latest.id)}><button>Edit</button></Link>:null}
+
+
                                     </section>
                                 </CardAll>
                         </CardContainer>

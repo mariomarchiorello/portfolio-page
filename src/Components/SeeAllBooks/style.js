@@ -15,10 +15,11 @@ export const CardAll = styled(Card)`
   outline: transparent;
 
   h2 {
-    margin: 5% 0 5% 0;
+    margin: 2% 0 0 0;
     color: #004fa0;
+    
   }
-
+  
   section {
     margin-top: 2%;
     margin-left: 3%;
@@ -47,7 +48,6 @@ export const CardAll = styled(Card)`
     align-items: center;
     justify-content: space-evenly;
     margin-bottom: 1%;
-    //height: 55px;
     width: 80%;
 
     button {
