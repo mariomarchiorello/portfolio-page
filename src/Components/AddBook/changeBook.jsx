@@ -64,12 +64,25 @@ const ChangeBook=(props)=> {
                 history.push("/")
             })
             .catch(err => console.error(err))
+
     }
+
+    /*------------------ discard changes before submitting*/
+
+    const discard = (e) =>{
+        e.preventDefault();
+        setTitle("")
+        setAuthor("")
+        setTotalAmount("")
+        setPages("")
+        setIsbn("")
+    }
+
     return (
         <>
             <Background>
                 <Header/>
-                {currentBook ? <PostFormContainer>
+                {currentBook ? <PostFormContainer id="form">
                     <section className="text"> change {currentBook.title}</section>
                     <section className="form">
                         <Label htmlFor="title">Title: {currentBook.title}</Label>
@@ -116,7 +129,7 @@ const ChangeBook=(props)=> {
                     </section>
 
                     <section className="button">
-
+                        <button onClick={discard}>discard changes</button>
                         <button onClick={editBook}>save changes</button>
                     </section>
                 </PostFormContainer> : null}
