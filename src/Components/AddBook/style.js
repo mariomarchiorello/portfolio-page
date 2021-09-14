@@ -52,9 +52,5 @@ export const PostFormContainer = styled.form`
         color: #fff;
       }
     }
-  }
-  
-
-
-`;
+  }`;
 

@@ -21,4 +21,4 @@ const Reducer = (state= initialState,action) => {
 
 };
 
-export const RootReducer = combineReducers(Reducer)
+export const RootReducer = combineReducers({Reducer})
