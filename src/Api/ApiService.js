@@ -1,5 +1,5 @@
 import axios from "axios";
-import {useMutation, useQery} from "react-queries"
+import {useMutation, useQuery} from "react-query"
 
 
 const api = axios.create({
@@ -9,18 +9,20 @@ const api = axios.create({
 /*---------------custom hooks to fetch with-------------------------------------- */
 /*------------- get all books-----------------------------------------------------*/
 export const useAllBooks = () =>
-    useQery(
+    useQuery(
         'allBooks',
         async () => {
             const {data} = await api.get('books')
             return data
         },
-        {refetchInterval: 100000}
+        {
+            refetchInterval:10000,
+        }
     )
 
 /*------------get book by ID----------------------------------------------------*/
 export const useBook = id =>
-    useQery(['books', id],
+    useQuery(['books', id],
         async () =>{
         const {data} = await api.get(`books/${id}`);
         return data

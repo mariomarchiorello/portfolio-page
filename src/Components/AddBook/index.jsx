@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import {Background,  Input, Label} from "../../Styles/globalstyle";
-import Header from "../Header";
 import {PostFormContainer} from "./style";
 import { useHistory } from "react-router-dom";
 import BackButton from "../BackButton";
@@ -50,7 +49,6 @@ function AddNewBook(props) {
     return (
         <>
             <Background>
-                <Header/>
                 <PostFormContainer>
                     <section className="text"> Something about add a new book</section>
                     <section className="form">
