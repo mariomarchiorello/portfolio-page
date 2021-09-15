@@ -30,7 +30,6 @@ function ShowAll(props) {
 
     /*-----------------book delete by id  function--------------------------------------*/
     const bookDeleter= (id)=>{
-        // e.preventDefault()
     const config = {
             method: "DELETE",
             headers: new Headers({
