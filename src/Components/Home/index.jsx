@@ -30,8 +30,8 @@ export default function Home() {
                                 </CardAll>
                         </CardContainer>
 
-                    <CardContainer><Link to="/show-all" className="buttonCard" >Browse all books</Link></CardContainer>:null}
-                    <CardContainer><Link to="/add-new" className="buttonCard">Add New Book</Link></CardContainer>
+                    <CardContainer><Link to="/books" className="buttonCard" >Browse all books</Link></CardContainer>
+                    <CardContainer><Link to="/add" className="buttonCard">Add New Book</Link></CardContainer>
 
                 </Background>
 
