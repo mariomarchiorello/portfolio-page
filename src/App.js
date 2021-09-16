@@ -1,30 +1,30 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Home from "./Components/Home";
-import ShowAll from "./Components/SeeAllBooks";
-import AddNewBook from "./Components/AddBook";
-import ChangeBook from "./Components/AddBook/changeBook";
+import React from 'react'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import Home from './Components/Home'
+import Header from './Components/Header'
+import AllBooks from './Components/SeeAllBooks/allBooks'
+import { QueryClient, QueryClientProvider } from 'react-query'
+import EditBook from './Components/EditBook/changeBook'
+import AddBook from './Components/AddBook'
 
+const queryClient = new QueryClient()
 
 function App() {
-  return (
-    <>
-      <Router>
-        <Switch>
-          {/* will add suspense fallback later----- maybe spinner, maybe some small animation------*/}
-          <Route exact path={"/"} component={Home}/>
-          <Route exact path={"/show-all"} component={ShowAll}/>
-          <Route exact path={"/add-new"} component={AddNewBook}/>
-          <Route exact path={"/change"} component={ChangeBook}/>
-{/*          <Route exact path={"/add-new"} component={AddNewBook}/>*/}
-
-
-        </Switch>
-      </Router>
-
-
-    </>
-  );
+    return (
+        <QueryClientProvider client={queryClient}>
+            <Router>
+                <Header />
+                <Switch>
+                    {/* will add suspense fallback later----- maybe spinner, maybe some small animation------*/}
+                    <Route exact path={'/'} component={Home} />
+                    <Route exact path={'/books'} component={AllBooks} />
+                    <Route exact path={'/add'} component={AddBook} />
+                    <Route exact path={'/book/:id'} component={EditBook} />
+                    {/*          <Route exact path={"/add-new"} component={AddNewBook}/>*/}
+                </Switch>
+            </Router>
+        </QueryClientProvider>
+    )
 }
 
-export default App;
+export default App

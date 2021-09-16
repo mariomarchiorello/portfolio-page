@@ -1,64 +1,23 @@
-import React, {useEffect, useState} from 'react';
-import Header from "../Header";
-import {Background, CardContainer} from "../../Styles/globalstyle";
-// import coverIcon from "../../Assets/book_cover_placeholder.png";
-import {Link} from "react-router-dom";
-import icon from "../../Assets/book_cover_placeholder.png";
-import {CardAll} from "../SeeAllBooks/style";
+import React from 'react'
+import { Background, ButtonPrimary } from '../../Styles/globalstyle'
+import { Link } from 'react-router-dom'
+import MostRecent from '../MostRecent/mostRecent'
+import { ButtonContainer } from '../MostRecent/style'
 
 export default function Home() {
-
-    const [allBooks, setAllBooks] = useState([])
-    useEffect(()=> {
-        const config = {
-            method:"GET",
-            headers: new Headers({
-                "content-Type": "application/json"
-            })
-        }
-        const url = "https://5c6eb0534fa1c9001424240b.mockapi.io/api/v1/books"
-        fetch(url,config)
-            .then(res=>res.json())
-            .then(data=>
-                setAllBooks(data))
-            .catch(err=>{
-                console.error(err)
-            })
-    },[])
-    const latest = allBooks[allBooks.length-1]
-    latest? sessionStorage.setItem("latestID", latest.id):sessionStorage.setItem("latestID", "")
-
-        return (
-            <>
-                <Background>
-                    <Header/>
-                        <CardContainer>
-                                    <CardAll className="onHomePage">
-                                        <h2>newest book in stock</h2>
-                                    <section className="cover">
-                                        <img src={icon} alt="placeholder for bookcover"/>
-                                    </section>
-                                    <section className= "info">
-                                        <p className="text">Titel: {latest? latest.title:""}</p>
-                                        <p className="text">Author: {latest? latest.author:""}</p>
-                                        <p className="text">Amount in Stock: {latest? latest.total_amount:""}</p>
-                                        <p className="text">Number of pages: {latest? latest.pages:""}</p>
-                                    </section>
-                                        <section className="actions">
-                                        {latest ? <Link to="/change" onClick= {()=>sessionStorage.setItem("currentId",latest.id)}><button>Edit</button></Link>:null}
-
-
-                                    </section>
-                                </CardAll>
-                        </CardContainer>
-
-                    {allBooks?<CardContainer><Link to="/show-all" className="buttonCard" stateToProps={allBooks} >Browse all books</Link></CardContainer>:null}
-                    <CardContainer><Link to="/add-new" className="buttonCard">Add New Book</Link></CardContainer>
-
-                </Background>
-
-            </>
-        );
-
-
+    return (
+        <>
+            <Background className={'home'}>
+                <MostRecent />
+                <ButtonContainer>
+                    <Link to="/books">
+                        <ButtonPrimary>Browse all books</ButtonPrimary>
+                    </Link>
+                    <Link>
+                        <ButtonPrimary>Add a Book</ButtonPrimary>
+                    </Link>
+                </ButtonContainer>
+            </Background>
+        </>
+    )
 }

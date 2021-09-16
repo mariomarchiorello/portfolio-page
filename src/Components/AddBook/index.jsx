@@ -1,106 +1,97 @@
-import React, {useState} from 'react';
-import {Background,  Input, Label} from "../../Styles/globalstyle";
-import Header from "../Header";
-import {PostFormContainer} from "./style";
-import { useHistory } from "react-router-dom";
-import BackButton from "../BackButton";
+import React, { useState } from 'react'
+import { Background, Input, Label } from '../../Styles/globalstyle'
+import { PostFormContainer } from './style'
+import { useHistory } from 'react-router-dom'
+import BackButton from '../BackButton'
+import { useAddBook } from '../../Api'
 
+const initialBook = {
+    title: '',
+    author: '',
+    total_amount: '',
+    pages: '',
+    isbn: '',
+}
 
-function AddNewBook(props) {
+function AddBook(props) {
+    const { mutateAsync: addBook } = useAddBook()
 
-    const history=useHistory()
+    /*------- adding new book without the useState for every key-Val-Pair-----------*/
+    const [newBook, setNewBook] = useState(initialBook)
 
-    const [title, setTitle]=useState("")
-    const [author, setAuthor]=useState("")
-    const [amount, setTotalAmount]=useState("")
-    const [pages, setPages]=useState("")
-    const [isbn, setIsbn]=useState("")
-
-    const lastId = sessionStorage.getItem("latestID")+1
-
-    const addNewBook = (e) =>{
-        e.preventDefault();
-
-        const postCredentials = {
-            id: lastId,
-            title: title,
-            author: author,
-            amount: amount,
-            pages: pages,
-            isbn: isbn
-        }
-        const config = {
-            method: "POST",
-            body: JSON.stringify(postCredentials),
-            headers: new Headers({
-                "Content-Type": "application/json"
-            })
-        }
-        fetch("https://5c6eb0534fa1c9001424240b.mockapi.io/api/v1/books",config)
-            .then(res=>{
-                res.json()
-                console.log(res.status)
-            })
-            .then(data=> {
-                history.push("/")
-                console.log(data)
-            })
-            .catch(err=>console.error(err))
+    const newValue = ({ target: { value, name } }) => {
+        setNewBook((newBook) => ({ ...newBook, [name]: value }))
     }
+
+    const add = async (e) => {
+        e.preventDefault()
+        await addBook(newBook)
+        history.push('/')
+        // TODO show toast
+    }
+
+    const history = useHistory()
+
     return (
         <>
             <Background>
-                <Header/>
                 <PostFormContainer>
-                    <section className="text"> Something about add a new book</section>
+                    <section className="text">
+                        {' '}
+                        Something about add a new book
+                    </section>
                     <section className="form">
                         <Label htmlFor="title">Title</Label>
                         <Input
                             required
                             type="text"
                             name="title"
-                            value={title}
-                            onChange={(e)=> setTitle(e.target.value)}/>
+                            value={newBook.title}
+                            onChange={newValue}
+                        />
 
                         <Label htmlFor="author">Author</Label>
                         <Input
                             required
                             type="text"
                             name="author"
-                            value={author}
-                            onChange={(e)=> setAuthor(e.target.value)}/>
+                            value={newBook.author}
+                            onChange={newValue}
+                        />
                         <Label htmlFor="amount">Amount in stock</Label>
                         <Input
                             required
                             type="number"
                             name="amount"
-                            value={amount}
-                            onChange={(e)=> setTotalAmount(e.target.value)}/>
+                            value={newBook.amount}
+                            onChange={newValue}
+                        />
                         <Label htmlFor="pages">Number of pages</Label>
                         <Input
                             required
                             type="number"
                             name="pages"
-                            value={pages}
-                            onChange={(e)=> setPages(e.target.value)}/>
+                            value={newBook.pages}
+                            onChange={newValue}
+                        />
                         <Label htmlFor="isbn">ISBN</Label>
                         <Input
                             required
                             type="number"
                             name="isbn"
-                            value={isbn}
-                            onChange={(e)=> setIsbn(e.target.value)}/>
+                            value={newBook.isbn}
+                            onChange={newValue}
+                        />
                     </section>
                     <section className="button">
-                        <button onClick={addNewBook}>Add to Library</button>
+                        <button onClick={add}>Add to Library</button>
                     </section>
                 </PostFormContainer>
 
-            <BackButton/>
+                <BackButton />
             </Background>
-
         </>
-    );
+    )
 }
 
-export default AddNewBook;
+export default AddBook
