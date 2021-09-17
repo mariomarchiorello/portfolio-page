@@ -3,7 +3,7 @@ import { Background, CardContainer } from '../../Styles/globalstyle';
 import { CardAll } from './style';
 import icon from '../../Assets/book_cover_placeholder.png';
 import { Link } from 'react-router-dom';
-import BackButton from '../BackButton';
+import BackButton from '../BackButton/backButton';
 import { useAllBooks, useDeleteBook } from '../../Api';
 import { useQueryClient } from 'react-query';
 

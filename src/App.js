@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Home from './Components/Home';
-import Header from './Components/Header';
+import Home from './Components/Home/home';
+import Header from './Components/Header/header';
 import AllBooks from './Components/AllBooks/allBooks';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import EditBook from './Components/EditBook/EditBook';

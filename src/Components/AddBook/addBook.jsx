@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Background, Input, Label } from '../../Styles/globalstyle';
 import { PostFormContainer } from './style';
 import { useHistory } from 'react-router-dom';
-import BackButton from '../BackButton';
+import BackButton from '../BackButton/backButton';
 import { useAddBook } from '../../Api';
 
 const initialBook = {

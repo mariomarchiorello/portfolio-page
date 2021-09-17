@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
 import { Background, Input, Label } from '../../Styles/globalstyle';
 import { PostFormContainer } from '../AddBook/style';
-import BackButton from '../BackButton';
+import BackButton from '../BackButton/backButton';
 import { useBook, useEditBook } from '../../Api';
 
 const initialBook = {
