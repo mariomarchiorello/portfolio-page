@@ -4,16 +4,17 @@ import { Background, Input, Label } from '../../Styles/globalstyle';
 import { PostFormContainer } from '../AddBook/style';
 import BackButton from '../BackButton/backButton';
 import { useBook, useEditBook } from '../../Api';
+import toast from "react-hot-toast";
 
 const initialBook = {
   title: '',
   author: '',
-  total_amount: '',
+  amount: '',
   pages: '',
   isbn: '',
 };
 
-const EditBook = props => {
+const EditBook = () => {
   const { id } = useParams();
   const history = useHistory();
   const { data, isLoading } = useBook(id);
@@ -41,7 +42,11 @@ const EditBook = props => {
 
     await updateBook(book);
 
-    // TODO Toast anzeigen (react-hot-toast)
+    toast('update was successful',
+        {
+          duration:4000,
+          position: 'top-center'
+        })
 
     history.push('/books');
   };
@@ -86,9 +91,9 @@ const EditBook = props => {
               <Input
                 required
                 placeholder="new amount"
-                type="text"
+                type="number"
                 name="amount"
-                value={book.total_amount}
+                value={book.amount}
                 onChange={handleChange}
               />
               <Label htmlFor="pages">Number of pages: {book.pages}</Label>

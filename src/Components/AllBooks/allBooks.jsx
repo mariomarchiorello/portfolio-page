@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import BackButton from '../BackButton/backButton';
 import { useAllBooks, useDeleteBook } from '../../Api';
 import { useQueryClient } from 'react-query';
-
+import toast, { Toaster } from 'react-hot-toast';
 function AllBooks() {
   const queryClient = useQueryClient();
   const { data: allBooks, isLoading } = useAllBooks();
@@ -15,6 +15,11 @@ function AllBooks() {
 
   const remove = id => async () => {
     await deleteBook(id);
+    toast('deleting was successful',
+        {
+          duration:4000,
+          position: 'top-center'
+        })
     await queryClient.refetchQueries('books');
   };
 
@@ -22,6 +27,7 @@ function AllBooks() {
 
   return (
     <>
+      <Toaster/>
       <Background>
         <CardContainer>
           {allBooks.map((book, index) => {
@@ -35,7 +41,7 @@ function AllBooks() {
                   <p className="text">Titel: {book ? book.title : ''}</p>
                   <p className="text">Author: {book ? book.author : ''}</p>
                   <p className="text">
-                    Amount in Stock: {book ? book.total_amount : ''}
+                    Amount in Stock: {book ? book.amount : ''}
                   </p>
                   <p className="text">
                     Number of pages: {book ? book.pages : ''}

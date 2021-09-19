@@ -4,11 +4,13 @@ import { PostFormContainer } from './style';
 import { useHistory } from 'react-router-dom';
 import BackButton from '../BackButton/backButton';
 import { useAddBook } from '../../Api';
+import toast, {Toaster}from "react-hot-toast";
+
 
 const initialBook = {
   title: '',
   author: '',
-  total_amount: undefined ,
+  amount: undefined ,
   pages: '',
   isbn: '',
 };
@@ -26,14 +28,21 @@ function AddBook() {
   const add = async e => {
     e.preventDefault();
     await addBook(newBook);
+    toast('adding was successful',
+        {
+          duration:4000,
+          position: 'top-center'
+        })
     history.push('/');
-    // TODO show toast
+
   };
+
 
   const history = useHistory();
 
   return (
     <>
+      <Toaster/>
       <Background>
         <PostFormContainer>
           <section className="text">
@@ -60,9 +69,9 @@ function AddBook() {
             <Label htmlFor="amount">Amount in stock</Label>
             <Input
               required
-              type="text"
+              type="number"
               name="amount"
-              value={newBook.total_amount}
+              value={newBook.amount}
               onChange={newValue}
             />
             <Label htmlFor="pages">Number of pages</Label>
