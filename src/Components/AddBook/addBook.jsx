@@ -8,12 +8,12 @@ import { useAddBook } from '../../Api';
 const initialBook = {
   title: '',
   author: '',
-  total_amount: '',
+  total_amount: undefined ,
   pages: '',
   isbn: '',
 };
 
-function AddBook(props) {
+function AddBook() {
   const { mutateAsync: addBook } = useAddBook();
 
   /*------- adding new book without the useState for every key-Val-Pair-----------*/
@@ -60,9 +60,9 @@ function AddBook(props) {
             <Label htmlFor="amount">Amount in stock</Label>
             <Input
               required
-              type="number"
+              type="text"
               name="amount"
-              value={newBook.amount}
+              value={newBook.total_amount}
               onChange={newValue}
             />
             <Label htmlFor="pages">Number of pages</Label>

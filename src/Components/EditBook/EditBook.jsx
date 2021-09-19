@@ -86,9 +86,9 @@ const EditBook = props => {
               <Input
                 required
                 placeholder="new amount"
-                type="number"
+                type="text"
                 name="amount"
-                value={book.amount}
+                value={book.total_amount}
                 onChange={handleChange}
               />
               <Label htmlFor="pages">Number of pages: {book.pages}</Label>
