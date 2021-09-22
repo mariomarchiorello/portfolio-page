@@ -4,13 +4,12 @@ import { PostFormContainer } from './style';
 import { useHistory } from 'react-router-dom';
 import BackButton from '../BackButton/backButton';
 import { useAddBook } from '../../Api';
-import toast, {Toaster}from "react-hot-toast";
-
+import toast, { Toaster } from 'react-hot-toast';
 
 const initialBook = {
   title: '',
   author: '',
-  amount: undefined ,
+  amount: undefined,
   pages: '',
   isbn: '',
 };
@@ -28,21 +27,18 @@ function AddBook() {
   const add = async e => {
     e.preventDefault();
     await addBook(newBook);
-    toast('adding was successful',
-        {
-          duration:4000,
-          position: 'top-center'
-        })
+    toast('adding was successful', {
+      duration: 4000,
+      position: 'top-center',
+    });
     history.push('/');
-
   };
-
 
   const history = useHistory();
 
   return (
     <>
-      <Toaster/>
+      <Toaster />
       <Background>
         <PostFormContainer>
           <section className="text">

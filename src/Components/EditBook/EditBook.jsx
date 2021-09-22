@@ -4,12 +4,12 @@ import { Background, Input, Label } from '../../Styles/globalstyle';
 import { PostFormContainer } from '../AddBook/style';
 import BackButton from '../BackButton/backButton';
 import { useBook, useEditBook } from '../../Api';
-import toast from "react-hot-toast";
+import toast from 'react-hot-toast';
 
 const initialBook = {
   title: '',
   author: '',
-  amount: '',
+  total_amount: '',
   pages: '',
   isbn: '',
 };
@@ -42,11 +42,10 @@ const EditBook = () => {
 
     await updateBook(book);
 
-    toast('update was successful',
-        {
-          duration:4000,
-          position: 'top-center'
-        })
+    toast('update was successful', {
+      duration: 4000,
+      position: 'top-center',
+    });
 
     history.push('/books');
   };
@@ -85,9 +84,7 @@ const EditBook = () => {
                 value={book.author}
                 onChange={handleChange}
               />
-              <Label htmlFor="amount">
-                Amount in stock: {book.total_amount}
-              </Label>
+              <Label htmlFor="amount">Amount in stock: {book.amount}</Label>
               <Input
                 required
                 placeholder="new amount"

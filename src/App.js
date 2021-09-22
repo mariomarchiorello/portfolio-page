@@ -8,6 +8,11 @@ import EditBook from './Components/EditBook/EditBook';
 import AddBook from './Components/AddBook/addBook';
 
 const queryClient = new QueryClient();
+/* the 'new QueryClient' is creating an instance referenced with the variable 'const queryClent' (but it could have any name you want)
+*  and has aces to all the methods and properties of the 'Queryclient' ==>> these methods are used to interact with the cache of the browser.
+*
+* By wrapping the whole app in the '<QueryClientProvider client={queryClient}>' tag, every page and every component
+* has aces to all the data that is stored inside the cache */
 
 function App() {
   return (
@@ -15,12 +20,10 @@ function App() {
       <Router>
         <Header />
         <Switch>
-          {/* will add suspense fallback later----- maybe spinner, maybe some small animation------*/}
           <Route exact path={'/'} component={Home} />
           <Route exact path={'/books'} component={AllBooks} />
           <Route exact path={'/books/add'} component={AddBook} />
           <Route exact path={'/books/:id'} component={EditBook} />
-          {/*          <Route exact path={"/add-new"} component={AddNewBook}/>*/}
         </Switch>
       </Router>
     </QueryClientProvider>
