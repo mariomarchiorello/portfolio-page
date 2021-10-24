@@ -5,7 +5,7 @@ import { GoHome } from '../../Styles/globalstyle';
 function BackButton() {
   return (
     <div>
-      <Link to="/">
+      <Link to="/books">
         <GoHome>Home</GoHome>
       </Link>
     </div>

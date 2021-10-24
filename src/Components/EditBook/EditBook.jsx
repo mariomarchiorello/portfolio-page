@@ -9,8 +9,8 @@ import toast from 'react-hot-toast';
 const initialBook = {
   title: '',
   author: '',
-  total_amount: '',
-  pages: '',
+  total_amount: 0,
+  pages: 0,
   isbn: '',
 };
 

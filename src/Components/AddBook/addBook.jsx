@@ -9,8 +9,8 @@ import toast, { Toaster } from 'react-hot-toast';
 const initialBook = {
   title: '',
   author: '',
-  amount: undefined,
-  pages: '',
+  total_amount: 0,
+  pages: 0,
   isbn: '',
 };
 
@@ -23,6 +23,7 @@ function AddBook() {
   const newValue = ({ target: { value, name } }) => {
     setNewBook(newBook => ({ ...newBook, [name]: value }));
   };
+  const history = useHistory();
 
   const add = async e => {
     e.preventDefault();
@@ -31,14 +32,12 @@ function AddBook() {
       duration: 4000,
       position: 'top-center',
     });
-    history.push('/');
+    history.push('/books');
   };
 
-  const history = useHistory();
 
   return (
     <>
-      <Toaster />
       <Background>
         <PostFormContainer>
           <section className="text">
@@ -62,12 +61,12 @@ function AddBook() {
               value={newBook.author}
               onChange={newValue}
             />
-            <Label htmlFor="amount">Amount in stock</Label>
+            <Label htmlFor="total_amount">Amount in stock</Label>
             <Input
               required
               type="number"
-              name="amount"
-              value={newBook.amount}
+              name="total_amount"
+              value={newBook.total_amount}
               onChange={newValue}
             />
             <Label htmlFor="pages">Number of pages</Label>
