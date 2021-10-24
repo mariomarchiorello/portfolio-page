@@ -9,7 +9,6 @@ function MostRecent() {
   if (isLoading) return null;
 
   const mostRecent = allBooks[allBooks.length - 1];
-  // console.log(mostRecent)
 
   return (
     <>

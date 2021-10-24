@@ -61,6 +61,8 @@ export const CardAll = styled.div`
       outline: transparent;
       border-radius: 10px;
       font-weight: bolder;
+      cursor: pointer;
+
       transition: background-color 0.5s, color 0.5s;
 
       :hover {

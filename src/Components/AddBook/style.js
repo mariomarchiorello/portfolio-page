@@ -45,6 +45,7 @@ export const PostFormContainer = styled.form`
       width: 50%;
       outline: transparent;
       background-color: rgba(0, 77, 159, 0.48);
+      cursor: pointer;
       transition: background-color 0.5s linear;
 
       :hover {

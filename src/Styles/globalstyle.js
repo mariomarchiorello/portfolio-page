@@ -6,7 +6,6 @@ export const GlobalStyle = createGlobalStyle`
       margin: 0;
       padding: 0;
       font-family: "roboto",sans-serif;
-      cursor: pointer;
     }`;
 
 export const Background = styled.div`
@@ -41,6 +40,8 @@ export const GoHome = styled.button`
   right: 25px;
   text-align: center;
   background-color: white;
+  cursor: pointer;
+
   transition: background-color 0.6s ease-in-out, color 0.6s ease-in-out;
   :hover {
     background-color: rgba(28, 125, 226, 0.83);
@@ -72,6 +73,7 @@ export const ButtonPrimary = styled.button`
   border-radius: 1rem;
   font-weight: bold;
   font-size: large;
+  cursor: pointer;
   color: rgba(28, 125, 226, 0.83);
   transition: color 0.6s linear, background-color 0.6s linear;
   :hover {
