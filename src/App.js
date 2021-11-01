@@ -25,7 +25,7 @@ function App() {
           <Route exact path={'/books'} component={HomeBook} />
           <Route exact path={'/books/all'} component={AllBooks} />
           <Route exact path={'/books/add'} component={AddBook} />
-          <Route exact path={'/books/:id'} component={EditBook} />
+          <Route exact path={'/books/edit/:id'} component={EditBook} />
         </Switch>
       </Router>
     </QueryClientProvider>

@@ -55,7 +55,7 @@ function AllBooks() {
                   <p className="text">Isbn: {book ? book.isbn : ''}</p>
                 </section>
                 <section className="actions">
-                  <Link to={`books/${book.id}`}>
+                  <Link to={`/books/edit/${book.id}`}>
                     <button>Edit</button>
                   </Link>
 

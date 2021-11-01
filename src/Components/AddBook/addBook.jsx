@@ -4,7 +4,7 @@ import { PostFormContainer } from './style';
 import { useHistory } from 'react-router-dom';
 import BackButton from '../BackButton/backButton';
 import { useAddBook } from '../../Api';
-import toast, { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
 
 const initialBook = {
   title: '',
