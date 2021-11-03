@@ -14,6 +14,14 @@ export const Container = styled.div`
   //justify-content: center;
   -webkit-box-shadow: 0px 10px 13px -7px #000000, 0px 12px 23px -21px #004fa0;
   box-shadow: 0px 10px 13px -7px #000000, 0px 12px 23px -21px #004fa0;
+  section.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 25%;
+    
+    
+  }
 
   .logo {
     height: 80%;

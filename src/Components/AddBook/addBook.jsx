@@ -35,7 +35,6 @@ function AddBook() {
     history.push('/books');
   };
 
-
   return (
     <>
       <Background>

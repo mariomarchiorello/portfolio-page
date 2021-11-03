@@ -11,9 +11,9 @@ export const useAllBooks = () =>
   useQuery(
     'books',
     async () => {
-/*-------- await returns an object => one of the properties of said object is "data",-----------
-* -------- below are two ways to deconstruct the "await"-object either with the dot(.) deconstruction
-* --------  and the {} deconstruction ----------------*/
+      /*-------- await returns an object => one of the properties of said object is "data",-----------
+       * -------- below are two ways to deconstruct the "await"-object either with the dot(.) deconstruction
+       * --------  and the {} deconstruction ----------------*/
       const result = await api.get('books');
       return result.data;
 
