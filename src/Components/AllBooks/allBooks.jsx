@@ -8,13 +8,9 @@ import { useAllBooks, useDeleteBook } from '../../Api';
 import { useQueryClient } from 'react-query';
 import toast, { Toaster } from 'react-hot-toast';
 
-
-
-
 function AllBooks() {
-
   const queryClient = useQueryClient();
-/*useQueryClient lets you aces the current instance of the the QueryClient and all it's properties and methods */
+  /*useQueryClient lets you aces the current instance of the the QueryClient and all it's properties and methods */
 
   const { data: allBooks, isLoading } = useAllBooks();
 
