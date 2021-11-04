@@ -23,7 +23,7 @@ function App() {
         <Header />
         <Toaster />
         <Switch>
-          <Route exact path={'/portfolio-page/'} component={Home} />
+          <Route exact path={'/portfolio-page'} component={Home} />
 
           <Route exact path={'/books'} component={HomeBook} />
           <Route exact path={'/books/all'} component={AllBooks} />
