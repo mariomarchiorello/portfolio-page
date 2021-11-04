@@ -15,6 +15,21 @@ export const Background = styled.div`
   flex-direction: column;
   align-items: center;
   background-color: rgba(186, 179, 179, 0.5);
+  
+   div.not-found-page{
+    background-color: deeppink;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    img{
+      margin-top: 5vh;
+    }
+    h3{
+      margin-top: 1vh;
+    }
+  }
+
 `;
 
 export const CardContainer = styled.div`
