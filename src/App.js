@@ -23,6 +23,7 @@ function App() {
         <Header />
         <Toaster />
         <Switch>
+                              <Route path="*" component={NotFoundPage} />
           <Route exact path={'/portfolio-page'} component={Home} />
 
           <Route exact path={'/books'} component={HomeBook} />
