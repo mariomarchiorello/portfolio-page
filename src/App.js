@@ -8,6 +8,7 @@ import AddBook from './Components/AddBook/addBook';
 import HomeBook from './Components/HomeBook/homebook';
 import { Toaster } from 'react-hot-toast';
 import Home from './Components/Home/home';
+import NotFound from "./Components/NotFound/notFound";
 
 const queryClient = new QueryClient();
 /* the 'new QueryClient' is creating an instance referenced with the variable 'const queryClent' (but it could have any name you want)
@@ -23,13 +24,18 @@ function App() {
         <Header />
         <Toaster />
         <Switch>
-                              <Route path="*" component={NotFoundPage} />
           <Route exact path={'/portfolio-page'} component={Home} />
 
-          <Route exact path={'/books'} component={HomeBook} />
-          <Route exact path={'/books/all'} component={AllBooks} />
-          <Route exact path={'/books/add'} component={AddBook} />
-          <Route exact path={'/books/edit/:id'} component={EditBook} />
+            <Route exact path={'/books'} component={HomeBook} />
+            <Route exact path={'/books/all'} component={AllBooks} />
+            <Route exact path={'/books/add'} component={AddBook} />
+            <Route exact path={'/books/edit/:id'} component={EditBook} />
+
+
+
+
+            {/*must stay at the bottom of the routs*/}
+            <Route path={"*"} component={NotFound} />
         </Switch>
       </Router>
     </QueryClientProvider>
