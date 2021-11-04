@@ -5,22 +5,20 @@ export const Container = styled.div`
   top: 0;
   z-index: 10;
   overflow-x: hidden;
-  height: 5rem;
+  height: 5vh;
   width: 100%;
-  background-color: rgba(25, 119, 201, 0.79);
+  background-color: rgb(43, 129, 205);
   color: #fff;
   display: flex;
   align-items: center;
-  //justify-content: center;
   -webkit-box-shadow: 0px 10px 13px -7px #000000, 0px 12px 23px -21px #004fa0;
   box-shadow: 0px 10px 13px -7px #000000, 0px 12px 23px -21px #004fa0;
-  section.menu{
+
+  section.menu {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     width: 25%;
-    
-    
   }
 
   .logo {
@@ -38,6 +36,6 @@ export const Container = styled.div`
   }
 
   @media (min-width: 480px) {
-    height: 5rem;
+    height: 12vh;
   }
 `;

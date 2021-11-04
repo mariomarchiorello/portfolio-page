@@ -9,13 +9,12 @@ export const GlobalStyle = createGlobalStyle`
     }`;
 
 export const Background = styled.div`
-  min-height: 100vh;
+  min-height: 95vh;
   max-width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #eef3f5;
-  //z-index: -1;
+  background-color: rgba(186, 179, 179, 0.5);
 `;
 
 export const CardContainer = styled.div`

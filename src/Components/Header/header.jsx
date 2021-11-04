@@ -1,26 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Container } from './style';
 import logo from '../../Assets/logos/logo_transparent_background.png';
-import Button from '@mui/material/Button';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import { useHistory } from 'react-router-dom';
-import AboutMeButton from "./aboutMeButton";
-import ExamplesButton from "./examplesButton";
+import AboutMeButton from './aboutMeButton';
+import ExamplesButton from './examplesButton';
 
-function Header(props) {
-  const [anchorEl, setAnchorEl] = useState(null);
-  const history = useHistory();
-  const open = Boolean(anchorEl);
-  const handleClick = event => {
-    event.preventDefault();
-    setAnchorEl(event.currentTarget);
-  };
-  const handleClose = goTo => {
-    history.push(goTo);
-    setAnchorEl(null);
-  };
-
+function Header() {
   return (
     <>
       <Container>
@@ -29,10 +13,9 @@ function Header(props) {
         </section>
 
         <section className="menu">
+          <AboutMeButton />
 
-            <AboutMeButton/>
-
-            <ExamplesButton/>
+          <ExamplesButton />
         </section>
       </Container>
     </>
