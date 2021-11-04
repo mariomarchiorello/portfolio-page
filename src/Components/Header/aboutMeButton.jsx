@@ -41,7 +41,7 @@ function AboutMeButton() {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <MenuItem onClick={() => goToPage('/')}>Home</MenuItem>
+        <MenuItem onClick={() => goToPage('/portfolio-page')}>Home</MenuItem>
         <MenuItem disabled={true} onClick={() => goToPage('/cv')}>
           My CV
         </MenuItem>
