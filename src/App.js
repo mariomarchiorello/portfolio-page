@@ -1,4 +1,6 @@
-import React from 'react';
+import React,{useEffect} from 'react';
+import  ReactGA from "react-ga";
+import { createBrowserHistory } from "history";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './Components/Header/header';
 import AllBooks from './Components/AllBooks/allBooks';
@@ -17,7 +19,22 @@ const queryClient = new QueryClient();
  * By wrapping the whole app in the '<QueryClientProvider client={queryClient}>' tag, every page and every component
  * has aces to all the data that is stored inside the cache */
 
+
+ReactGA.initialize("UA-211973159-1");
+const history = createBrowserHistory();
+history.listen(location => {
+  ReactGA.set({page:location.pathname});
+  ReactGA.pageview(location.pathname)
+});
+
+
+
 function App() {
+
+  useEffect(()=>{
+  ReactGA.pageview(window.location.pathname)
+},[])
+
   return (
     <QueryClientProvider client={queryClient}>
       <Router>
