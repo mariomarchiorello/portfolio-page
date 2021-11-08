@@ -40,7 +40,7 @@ export const CardContainer = styled.div`
   justify-content: center;
   align-items: center;
   background-color: transparent;
-  img{
+  img {
     height: 60px;
     width: 60px;
   }

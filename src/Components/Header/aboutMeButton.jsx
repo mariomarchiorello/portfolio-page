@@ -23,7 +23,7 @@ function AboutMeButton() {
   return (
     <>
       <Button
-        sx={{ color: 'black' }}
+        sx={{ color: 'black', fontSize: 'large' }}
         id="menuButton"
         aria-controls="about-me-menu"
         aria-haspopup="true"

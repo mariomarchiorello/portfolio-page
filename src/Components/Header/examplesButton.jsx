@@ -23,7 +23,7 @@ function ExamplesButton() {
   return (
     <>
       <Button
-        sx={{ color: 'black' }}
+        sx={{ color: 'black', fontSize: 'large' }}
         id="menuButton"
         aria-controls="examples-menu"
         aria-haspopup="true"
