@@ -8,9 +8,8 @@ import pic4 from '../../Assets/homePictures/IMG_4740.JPG';
 import pic5 from '../../Assets/homePictures/IMG_4885.JPG';
 import pic6 from '../../Assets/homePictures/IMG_5341.JPG';
 import pic7 from '../../Assets/homePictures/IMG_7146.JPG';
-import { BackgroundHome ,Items} from './style';
-import Carousel from "react-elastic-carousel";
-
+import { BackgroundHome, Items } from './style';
+import Carousel from 'react-elastic-carousel';
 
 function Home() {
   const textMe =
@@ -32,31 +31,70 @@ function Home() {
     'to turn this passion into my profession. From my previous career I bring experience in customer\n' +
     'contact, motivation, energy, and flexibility.';
 
-
-
   return (
     <>
       <BackgroundHome>
         <section className={'pictures'}>
-          <Carousel itemPosition={"center"} style={{height:"100%", padding:"10px",justifyContent:"center", alignItems:"center"}} itemsToShow={1}>
+          <Carousel
+            itemPosition={'center'}
+            style={{
+              height: '100%',
+              padding: '10px',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+            itemsToShow={1}
+          >
             <Items>
-              <img className={"carouselImage"} src={pic1} alt={"profile of Mario"}/>
+              <img
+                className={'carouselImage'}
+                src={pic1}
+                alt={'profile of Mario'}
+              />
             </Items>
             <Items>
-              <img className={"carouselImage"} src={pic2} alt={"profile of Mario"}/></Items>
+              <img
+                className={'carouselImage'}
+                src={pic2}
+                alt={'profile of Mario'}
+              />
+            </Items>
             <Items>
-              <img className={"carouselImage"} src={pic3} alt={"profile of Mario"}/></Items>
+              <img
+                className={'carouselImage'}
+                src={pic3}
+                alt={'profile of Mario'}
+              />
+            </Items>
             <Items>
-              <img className={"carouselImage"} src={pic4} alt={"profile of Mario"}/></Items>
+              <img
+                className={'carouselImage'}
+                src={pic4}
+                alt={'profile of Mario'}
+              />
+            </Items>
             <Items>
-              <img className={"carouselImage"} src={pic5} alt={"profile of Mario"}/></Items>
+              <img
+                className={'carouselImage'}
+                src={pic5}
+                alt={'profile of Mario'}
+              />
+            </Items>
             <Items>
-              <img className={"carouselImage"} src={pic6} alt={"profile of Mario"}/></Items>
+              <img
+                className={'carouselImage'}
+                src={pic6}
+                alt={'profile of Mario'}
+              />
+            </Items>
             <Items>
-              <img className={"carouselImage"} src={pic7} alt={"profile of Mario"}/></Items>
+              <img
+                className={'carouselImage'}
+                src={pic7}
+                alt={'profile of Mario'}
+              />
+            </Items>
           </Carousel>
-
-
         </section>
         <section className={'text'}>
           <h1>Hi and welcome to my website!</h1>

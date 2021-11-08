@@ -1,6 +1,6 @@
-import React,{useEffect} from 'react';
-import  ReactGA from "react-ga";
-import { createBrowserHistory } from "history";
+import React, { useEffect } from 'react';
+import ReactGA from 'react-ga';
+import { createBrowserHistory } from 'history';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './Components/Header/header';
 import AllBooks from './Components/AllBooks/allBooks';
@@ -10,9 +10,8 @@ import AddBook from './Components/AddBook/addBook';
 import HomeBook from './Components/HomeBook/homebook';
 import { Toaster } from 'react-hot-toast';
 import Home from './Components/Home/home';
-import NotFound from "./Components/NotFound/notFound";
-
-
+import NotFound from './Components/NotFound/notFound';
+import Cv from './Components/CV/cv';
 
 const queryClient = new QueryClient();
 /* the 'new QueryClient' is creating an instance referenced with the variable 'const queryClent' (but it could have any name you want)
@@ -21,21 +20,17 @@ const queryClient = new QueryClient();
  * By wrapping the whole app in the '<QueryClientProvider client={queryClient}>' tag, every page and every component
  * has aces to all the data that is stored inside the cache */
 
-
-ReactGA.initialize("UA-211973159-1");
+ReactGA.initialize('UA-211973159-1');
 const history = createBrowserHistory();
 history.listen(location => {
-  ReactGA.set({page:location.pathname});
-  ReactGA.pageview(location.pathname)
+  ReactGA.set({ page: location.pathname });
+  ReactGA.pageview(location.pathname);
 });
 
-
-
 function App() {
-
-  useEffect(()=>{
-  ReactGA.pageview(window.location.pathname)
-},[])
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
 
   return (
     <QueryClientProvider client={queryClient}>
@@ -45,16 +40,14 @@ function App() {
         <Switch>
           <Route exact path={'/portfolio-page'} component={Home} />
 
-            <Route exact path={'/books'} component={HomeBook} />
-            <Route exact path={'/books/all'} component={AllBooks} />
-            <Route exact path={'/books/add'} component={AddBook} />
-            <Route exact path={'/books/edit/:id'} component={EditBook} />
+          <Route exact path={'/cv'} component={Cv} />
+          <Route exact path={'/books'} component={HomeBook} />
+          <Route exact path={'/books/all'} component={AllBooks} />
+          <Route exact path={'/books/add'} component={AddBook} />
+          <Route exact path={'/books/edit/:id'} component={EditBook} />
 
-
-
-
-            {/*must stay at the bottom of the routs*/}
-            <Route path={"*"} component={NotFound} />
+          {/*must stay at the bottom of the routs*/}
+          <Route path={'*'} component={NotFound} />
         </Switch>
       </Router>
     </QueryClientProvider>

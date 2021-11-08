@@ -42,7 +42,7 @@ function AboutMeButton() {
         }}
       >
         <MenuItem onClick={() => goToPage('/portfolio-page')}>Home</MenuItem>
-        <MenuItem disabled={true} onClick={() => goToPage('/cv')}>
+        <MenuItem disabled={false} onClick={() => goToPage('/cv')}>
           My CV
         </MenuItem>
       </Menu>

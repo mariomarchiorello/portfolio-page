@@ -1,33 +1,29 @@
 import styled from 'styled-components';
 import { Background } from '../../Styles/globalstyle';
 
-
 export const Items = styled.div`
-    height:100% ;
+  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  img.carouselImage{
+  img.carouselImage {
     max-height: 100%;
     max-width: 100%;
   }
-  
-
 `;
 
 export const BackgroundHome = styled(Background)`
   display: flex;
   flex-direction: row;
   width: 100%;
-  min-height: 100vh;
   align-items: flex-start;
 
   section.pictures {
     position: sticky;
-    top: 25vh;
+    top: 20vh;
     height: 60vh;
     width: 40vw;
     margin-left: 2%;
@@ -35,12 +31,12 @@ export const BackgroundHome = styled(Background)`
     justify-content: center;
     align-items: center;
   }
-  
 
-  .text {
-    position: static;
-    top: 25vh;
-    min-height: 100%;
+  section.text {
+    overflow-y: hidden;
+    position: sticky;
+    top: 20vh;
+    //min-height: 100%;
     width: 60vw;
     display: flex;
     flex-direction: column;
