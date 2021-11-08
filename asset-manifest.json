@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/portfolio-page/static/css/main.852575e5.chunk.css",
-    "main.js": "/portfolio-page/static/js/main.cf92d963.chunk.js",
-    "main.js.map": "/portfolio-page/static/js/main.cf92d963.chunk.js.map",
-    "runtime-main.js": "/portfolio-page/static/js/runtime-main.b999d27b.js",
-    "runtime-main.js.map": "/portfolio-page/static/js/runtime-main.b999d27b.js.map",
-    "static/js/2.0093f46d.chunk.js": "/portfolio-page/static/js/2.0093f46d.chunk.js",
-    "static/js/2.0093f46d.chunk.js.map": "/portfolio-page/static/js/2.0093f46d.chunk.js.map",
+    "main.css": "/portfolio-page/static/css/main.7972849f.chunk.css",
+    "main.js": "/portfolio-page/static/js/main.245ae77e.chunk.js",
+    "main.js.map": "/portfolio-page/static/js/main.245ae77e.chunk.js.map",
+    "runtime-main.js": "/portfolio-page/static/js/runtime-main.a36737ba.js",
+    "runtime-main.js.map": "/portfolio-page/static/js/runtime-main.a36737ba.js.map",
+    "static/js/2.a448ba18.chunk.js": "/portfolio-page/static/js/2.a448ba18.chunk.js",
+    "static/js/2.a448ba18.chunk.js.map": "/portfolio-page/static/js/2.a448ba18.chunk.js.map",
     "index.html": "/portfolio-page/index.html",
-    "static/css/main.852575e5.chunk.css.map": "/portfolio-page/static/css/main.852575e5.chunk.css.map",
-    "static/js/2.0093f46d.chunk.js.LICENSE.txt": "/portfolio-page/static/js/2.0093f46d.chunk.js.LICENSE.txt",
+    "static/css/main.7972849f.chunk.css.map": "/portfolio-page/static/css/main.7972849f.chunk.css.map",
+    "static/js/2.a448ba18.chunk.js.LICENSE.txt": "/portfolio-page/static/js/2.a448ba18.chunk.js.LICENSE.txt",
     "static/media/404_image.8c92d9d9.png": "/portfolio-page/static/media/404_image.8c92d9d9.png",
     "static/media/IMG-20170118-WA0002.92d624e5.jpg": "/portfolio-page/static/media/IMG-20170118-WA0002.92d624e5.jpg",
     "static/media/IMG-20190829-WA0033 2.10c901ea.jpg": "/portfolio-page/static/media/IMG-20190829-WA0033 2.10c901ea.jpg",
@@ -21,9 +21,9 @@
     "static/media/mario_bike.304fa388.jpg": "/portfolio-page/static/media/mario_bike.304fa388.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.b999d27b.js",
-    "static/js/2.0093f46d.chunk.js",
-    "static/css/main.852575e5.chunk.css",
-    "static/js/main.cf92d963.chunk.js"
+    "static/js/runtime-main.a36737ba.js",
+    "static/js/2.a448ba18.chunk.js",
+    "static/css/main.7972849f.chunk.css",
+    "static/js/main.245ae77e.chunk.js"
   ]
 }
