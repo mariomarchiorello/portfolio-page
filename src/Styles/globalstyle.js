@@ -40,6 +40,10 @@ export const CardContainer = styled.div`
   justify-content: center;
   align-items: center;
   background-color: transparent;
+  img{
+    height: 60px;
+    width: 60px;
+  }
 `;
 
 export const GoHome = styled.button`

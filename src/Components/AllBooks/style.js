@@ -12,9 +12,7 @@ export const CardAll = styled.div`
   align-items: center;
   border: 1px solid rgba(161, 184, 191, 0.67);
   border-radius: 15px;
-
   transition: background-color 0.3s linear;
-
   :hover {
     background-color: rgba(161, 184, 191, 0.1);
   }
@@ -27,7 +25,6 @@ export const CardAll = styled.div`
   section {
     margin-top: 2%;
     margin-left: 3%;
-
     .cover {
       height: 25%;
       width: 25%;

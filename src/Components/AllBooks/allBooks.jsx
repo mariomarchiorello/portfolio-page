@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import BackButton from '../BackButton/backButton';
 import { useAllBooks, useDeleteBook } from '../../Api';
 import { useQueryClient } from 'react-query';
-import toast, { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
 
 function AllBooks() {
   const queryClient = useQueryClient();
@@ -29,7 +29,6 @@ function AllBooks() {
 
   return (
     <>
-      <Toaster />
       <Background>
         <CardContainer>
           {allBooks.map((book, index) => {
