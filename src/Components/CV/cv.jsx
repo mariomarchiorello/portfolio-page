@@ -13,7 +13,7 @@ function Cv() {
           <div className={"container"}>
 
         <Document file={cv}>
-          <Page width={800} pageNumber={1} />
+          <Page width={700} pageNumber={1} />
         </Document>
           </div>
       </BackgroundCV>
