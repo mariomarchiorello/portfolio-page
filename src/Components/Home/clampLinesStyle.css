@@ -23,3 +23,11 @@
   background: rgba(28, 125, 226, 0.83);
   color: white;
 }
+.image-gallery-thumbnail {
+  width: 120px
+}
+
+.image-gallery-thumbnail img {
+  width: auto;
+  height: 75px;
+}

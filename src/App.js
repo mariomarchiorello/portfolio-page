@@ -12,6 +12,8 @@ import { Toaster } from 'react-hot-toast';
 import Home from './Components/Home/home';
 import NotFound from "./Components/NotFound/notFound";
 
+
+
 const queryClient = new QueryClient();
 /* the 'new QueryClient' is creating an instance referenced with the variable 'const queryClent' (but it could have any name you want)
  *  and has aces to all the methods and properties of the 'Queryclient' ==>> these methods are used to interact with the cache of the browser.
