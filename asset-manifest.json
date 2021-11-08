@@ -1,19 +1,20 @@
 {
   "files": {
     "main.css": "/portfolio-page/static/css/main.54b1dd7e.chunk.css",
-    "main.js": "/portfolio-page/static/js/main.c8f68a2a.chunk.js",
-    "main.js.map": "/portfolio-page/static/js/main.c8f68a2a.chunk.js.map",
+    "main.js": "/portfolio-page/static/js/main.ce4d56a0.chunk.js",
+    "main.js.map": "/portfolio-page/static/js/main.ce4d56a0.chunk.js.map",
     "runtime-main.js": "/portfolio-page/static/js/runtime-main.a36737ba.js",
     "runtime-main.js.map": "/portfolio-page/static/js/runtime-main.a36737ba.js.map",
-    "static/js/2.9639b338.chunk.js": "/portfolio-page/static/js/2.9639b338.chunk.js",
-    "static/js/2.9639b338.chunk.js.map": "/portfolio-page/static/js/2.9639b338.chunk.js.map",
+    "static/js/2.56fd04c3.chunk.js": "/portfolio-page/static/js/2.56fd04c3.chunk.js",
+    "static/js/2.56fd04c3.chunk.js.map": "/portfolio-page/static/js/2.56fd04c3.chunk.js.map",
     "3bc629d5f743a1772f7a775c5f5fb0c1.js": "/portfolio-page/3bc629d5f743a1772f7a775c5f5fb0c1.js",
     "3bc629d5f743a1772f7a775c5f5fb0c1.js.LICENSE.txt": "/portfolio-page/3bc629d5f743a1772f7a775c5f5fb0c1.js.LICENSE.txt",
     "index.html": "/portfolio-page/index.html",
     "static/css/main.54b1dd7e.chunk.css.map": "/portfolio-page/static/css/main.54b1dd7e.chunk.css.map",
-    "static/js/2.9639b338.chunk.js.LICENSE.txt": "/portfolio-page/static/js/2.9639b338.chunk.js.LICENSE.txt",
+    "static/js/2.56fd04c3.chunk.js.LICENSE.txt": "/portfolio-page/static/js/2.56fd04c3.chunk.js.LICENSE.txt",
     "static/media/404_image.8c92d9d9.png": "/portfolio-page/static/media/404_image.8c92d9d9.png",
     "static/media/CV_EN.f29f0d77.pdf": "/portfolio-page/static/media/CV_EN.f29f0d77.pdf",
+    "static/media/Chalenge_description.24166179.pdf": "/portfolio-page/static/media/Chalenge_description.24166179.pdf",
     "static/media/IMG-20170118-WA0002.92d624e5.jpg": "/portfolio-page/static/media/IMG-20170118-WA0002.92d624e5.jpg",
     "static/media/IMG-20190829-WA0033 2.10c901ea.jpg": "/portfolio-page/static/media/IMG-20190829-WA0033 2.10c901ea.jpg",
     "static/media/IMG_4740.35bab0fa.JPG": "/portfolio-page/static/media/IMG_4740.35bab0fa.JPG",
@@ -25,8 +26,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.a36737ba.js",
-    "static/js/2.9639b338.chunk.js",
+    "static/js/2.56fd04c3.chunk.js",
     "static/css/main.54b1dd7e.chunk.css",
-    "static/js/main.c8f68a2a.chunk.js"
+    "static/js/main.ce4d56a0.chunk.js"
   ]
 }
