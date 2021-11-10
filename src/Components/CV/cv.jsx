@@ -12,7 +12,11 @@ function Cv() {
       <BackgroundCV>
         <div className={'container'}>
           <Document file={cv}>
-            <Page width={700} pageNumber={1} />
+            {window.innerWidth <= 480 ? (
+              <Page scale={0.8} width={500} pageNumber={1} />
+            ) : (
+              <Page scale={0.8} width={900} pageNumber={1} />
+            )}
           </Document>
         </div>
       </BackgroundCV>

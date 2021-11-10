@@ -12,5 +12,9 @@ export const BackgroundCV = styled(Background)`
     justify-content: center;
     align-items: center;
     padding: 1%;
+    @media (max-width: 480px) {
+      overflow: hidden;
+      max-width: 95%;
+    }
   }
 `;
