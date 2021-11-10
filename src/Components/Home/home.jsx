@@ -1,6 +1,5 @@
 import React from 'react';
 import ClampLines from 'react-clamp-lines';
-import './clampLinesStyle.css';
 import pic1 from '../../Assets/homePictures/mario_bike.jpg';
 import pic2 from '../../Assets/homePictures/IMG-20170118-WA0002.jpg';
 import pic3 from '../../Assets/homePictures/IMG-20190829-WA0033 2.jpg';
@@ -36,7 +35,7 @@ function Home() {
       <BackgroundHome>
         <section className={'pictures'}>
           <Carousel
-            itemPosition={'center'}
+            itemPosition={'CENTER'}
             style={{
               height: '100%',
               padding: '10px',

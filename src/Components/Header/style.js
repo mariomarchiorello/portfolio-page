@@ -13,9 +13,8 @@ export const Container = styled.div`
   align-items: center;
   -webkit-box-shadow: 0px 10px 13px -7px #000000, 0px 12px 23px -21px #004fa0;
   box-shadow: 0px 10px 13px -7px #000000, 0px 12px 23px -21px #004fa0;
-  @media(max-width:480px){
+  @media (max-width: 480px) {
     flex-direction: row;
-    
   }
 
   section.menu {
@@ -23,15 +22,15 @@ export const Container = styled.div`
     flex-direction: row;
     justify-content: space-evenly;
     width: auto;
-    button{
-      @media(max-width: 480px){
+    button {
+      @media (max-width: 480px) {
         font-size: medium;
         width: auto;
         white-space: nowrap;
         text-align: center;
         margin-right: 2%;
       }
-    }    
+    }
   }
 
   .logo {
@@ -41,7 +40,7 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    @media(max-width: 480px){
+    @media (max-width: 480px) {
       width: 25%;
     }
     img {
