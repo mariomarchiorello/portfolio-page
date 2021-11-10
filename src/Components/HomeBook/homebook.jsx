@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Background, ButtonPrimary } from '../../Styles/globalstyle';
 import { Link } from 'react-router-dom';
 import MostRecent from '../MostRecent/mostRecent';
@@ -34,6 +34,10 @@ export default function HomeBook() {
   function closeModal() {
     setModalIsOpen(false);
   }
+
+  useEffect(() => {
+    window.innerWidth < 900 ? setModalIsOpen(false) : setModalIsOpen(true);
+  }, []);
 
   return (
     <>
