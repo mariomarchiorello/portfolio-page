@@ -1,7 +1,6 @@
 import React from 'react';
-import { CardContainer } from '../../Styles/globalstyle';
+import { CardAll, CardContainer } from '../../Styles/globalstyle';
 import { useAllBooks } from '../../Api';
-import { CardAll } from '../AllBooks/style';
 import icon from '../../Assets/book_cover_placeholder.png';
 
 function MostRecent() {
