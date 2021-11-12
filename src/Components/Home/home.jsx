@@ -13,12 +13,12 @@ import Carousel from 'react-elastic-carousel';
 function Home() {
   const textMe =
     "My name is Mario Marchiorello, I'm a young at heart web developer\n" +
-    'with a with a non-linear past, a large portion of motivation, and a well-balanced mix of\n' +
+    'with a non-linear past, a large portion of motivation, and a well-balanced mix of\n' +
     'soft and hard skills.\n' +
-    "I'm looking for a position as junior Front-End developer.\n" +
+    "I'm looking for a position as junior Front-End developer\n" +
     'In April I successfully completed a Software Boot Camp\n' +
     'at the Propulsion Academy in Zurich. As part of this intensive training, I pitched an original\n' +
-    'idea in a final project, convinced the course management to select it, and led an international team\n' +
+    'idea for the final project, convinced the course management to select it, and led an international team\n' +
     'in the implementation. The result, a web app, allows a climate protection organization to annotate\n' +
     'photos, collect the resulting data in a relational database, and store it in an open-source format for scientific purposes.\n' +
     'As team leader, I was responsible for communicating with the GOES Foundation, ensuring a\n' +
